@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .box-container {
+    @apply w-full max-w-7xl mx-auto;
+  }
+  .btn-default {
+    @apply py-2 px-4 rounded-md bg-sky-600 text-white hover:bg-sky-800 focus:ring-sky-500;
+  }
+}
+
+@layer utilities {
+  .container-padding {
+    @apply px-4 pt-20 pb-10 lg:py-32 lg:px-8;
+  }
+}
+
+@layer base {
+  /* Extending the form components */
+  [type='text'],
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [multiple],
+  textarea,
+  select {
+    @apply rounded-md placeholder-gray-400 border-gray-300 text-gray-900 focus:border-sky-600 focus:ring-sky-600 disabled:opacity-50;
+  }
+
+  [type='number']::-webkit-outer-spin-button,
+  [type='number']::-webkit-outer-spin-button,
+  [type='number'] {
+    -webkit-appearance: none !important;
+    -moz-appearance: textfield !important;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    @apply text-sky-600 border-gray-200 focus:ring-sky-500 cursor-pointer;
+  }
+
+  input[type='checkbox'] {
+    @apply rounded;
+  }
+}
