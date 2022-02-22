@@ -6,6 +6,8 @@ import { corsMw, errorHandler } from './middleware';
 import VotingRoutes from './routes/voting.routes';
 
 const app = express();
+
+app.set('port', process.env.PORT || 5000);
 app.set('trust proxy', true);
 app.use(express.json());
 app.use(cookieParser());

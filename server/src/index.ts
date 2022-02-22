@@ -20,7 +20,7 @@ const start = async () => {
     console.error('⚠️ Error on start:', error);
   }
 
-  app.listen(3030, () => console.log('🚀 Listening on port 3030!'));
+  app.listen(app.get('port'), () => console.log(`🚀 Listening on port ${app.get('port')}!`));
 };
 
 start();
