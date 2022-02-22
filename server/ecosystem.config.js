@@ -2,8 +2,8 @@ module.exports = {
   apps: [
     {
       name: 'unicamp_server',
-      script: './server/dist/index.js',
-      ignore_watch: ['./server/node_modules', './server/public', './client'],
+      script: './dist/index.js',
+      ignore_watch: ['./node_modules'],
       watch: true,
       instances: 2,
       exec_mode: 'cluster',
