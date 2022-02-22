@@ -8,6 +8,7 @@ module.exports = {
       instances: 2,
       exec_mode: 'cluster',
       increment_var: 'PORT',
+      node_args: ['-r dotenv/config'],
       env: {
         PORT: 3030,
         NODE_ENV: 'production',
