@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { body } from 'express-validator';
 import { NotFoundError, UnauthorizedError } from '../errors';
+import { validateRequest } from '../middleware';
 import { Candidate } from '../models/Candidate.model';
 import { Vote } from '../models/Vote.model';
 
@@ -36,4 +37,4 @@ const controller = async (req: Request, res: Response) => {
   res.status(201).send(newVote);
 };
 
-export const saveVoteFlow = [controller];
+export const saveVoteFlow = [bodyValidation, validateRequest, controller];
