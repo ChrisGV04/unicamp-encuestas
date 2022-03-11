@@ -13,7 +13,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div class="min-h-screen w-full max-w-3xl mx-auto flex flex-col justify-center items-center px-4">
+  <div class="min-h-screen w-full max-w-3xl mx-auto flex flex-col justify-center items-center px-4 py-8">
     <h1 class="text-2xl text-gray-900 font-bold">¡Gracias por tu voto!</h1>
     <span class="text-sm mt-2 text-gray-500">Hemos registrado tu voto correctamente</span>
 
@@ -21,7 +21,7 @@ onBeforeMount(() => {
       <img
         :alt="store.myVote?.candidate.name"
         :src="store.myVote?.candidate.imageUrl"
-        class="block w-full rounded-2xl shadow-md object-cover"
+        class="block max-w-full rounded-2xl max-h-[80vh] shadow-md object-contain"
       />
       <span class="block mt-6 text-gray-600 font-medium">{{ store.myVote?.candidate.name || '--' }}</span>
     </div>

@@ -53,17 +53,20 @@ const validateAndFetch = async () => {
     <BaseButton class="btn-default w-full">Continuar</BaseButton>
   </form>
 
-  <div v-else class="min-h-screen w-full max-w-xl mx-auto flex flex-col justify-center items-center px-4">
+  <div
+    v-else
+    class="min-h-screen w-full max-w-xl mx-auto flex flex-col justify-center items-center px-4 py-8"
+  >
     <h1 class="text-gray-900 text-2xl font-bold">Resultados Encuesta Unicamp</h1>
 
-    <ul class="mt-6 w-full flex flex-col gap-2">
+    <ul class="mt-6 w-full flex flex-col gap-4">
       <li
         v-for="(candidate, idx) in store.sortedCandidates"
         :key="candidate.id"
         class="overflow-hidden bg-white rounded-md shadow flex gap-4 items-center"
       >
-        <div class="w-24">
-          <img :src="candidate.imageUrl" :alt="candidate.name" class="w-full max-h-20 object-cover" />
+        <div class="w-1/4">
+          <img :src="candidate.imageUrl" :alt="candidate.name" class="w-full max-h-40 object-cover" />
         </div>
 
         <div class="flex-1">
