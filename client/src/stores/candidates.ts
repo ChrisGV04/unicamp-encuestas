@@ -15,7 +15,8 @@ export const useCandidatesStore = defineStore('candidates', {
 
   actions: {
     async fetchCandidates() {
-      if (!this.currentEmail) this.currentEmail = localStorage.getItem('currentEmail') || '';
+      if (!this.currentEmail)
+        this.currentEmail = localStorage.getItem('currentEmail') || localStorage.getItem('lock') || '';
 
       try {
         const { data } = await getCandidates(this.currentEmail);
@@ -43,6 +44,7 @@ export const useCandidatesStore = defineStore('candidates', {
       try {
         const { data } = await saveVote({ email: this.currentEmail, candidate: candidateId });
         this.myVote = JSON.parse(JSON.stringify(data));
+        localStorage.setItem('lock', this.currentEmail);
         return true;
       } catch (error) {
         console.error('Failed to save vote');

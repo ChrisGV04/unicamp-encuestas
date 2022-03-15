@@ -7,7 +7,7 @@ const error = ref('');
 const email = ref('');
 
 // Clear the current email
-localStorage.clear();
+localStorage.removeItem('currentEmail');
 store.currentEmail = '';
 
 const router = useRouter();
