@@ -66,7 +66,9 @@ onBeforeRouteLeave(() => {
 </script>
 
 <template>
-  <div class="min-h-screen w-full max-w-3xl mx-auto flex flex-col justify-center items-center gap-6 px-4">
+  <div
+    class="min-h-screen w-full max-w-3xl mx-auto flex flex-col justify-center items-center gap-6 px-4 py-8"
+  >
     <div class="flex flex-col items-center">
       <h1 class="text-2xl text-gray-900 font-bold">Elige tu obra favorita</h1>
       <span class="text-sm mt-2 text-gray-500 underline">

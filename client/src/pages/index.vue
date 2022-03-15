@@ -31,7 +31,7 @@ const validateAndContinue = async () => {
 <template>
   <form
     @submit.prevent="validateAndContinue"
-    class="min-h-screen w-96 mx-auto flex flex-col justify-center items-center gap-6"
+    class="min-h-screen w-full max-w-[24rem] mx-auto flex flex-col justify-center items-center gap-6 px-4"
   >
     <h1 class="text-gray-900 text-2xl font-bold">Encuesta Unicamp</h1>
     <TheInputField

@@ -34,7 +34,7 @@ const validateAndFetch = async () => {
   <form
     v-if="!canView"
     @submit.prevent="validateAndFetch"
-    class="min-h-screen w-96 mx-auto flex flex-col justify-center items-center gap-6"
+    class="min-h-screen w-96 mx-auto flex flex-col justify-center items-center gap-6 px-4"
   >
     <h1 class="text-gray-900 text-2xl font-bold">Resultados Encuesta Unicamp</h1>
     <TheInputField
