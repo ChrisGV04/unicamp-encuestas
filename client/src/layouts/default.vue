@@ -1,18 +1,18 @@
 <script setup lang="ts">
 const route = useRoute();
-const router = useRouter();
+// const router = useRouter();
 
-const voteLock = localStorage.getItem('lock');
+// const voteLock = localStorage.getItem('lock');
 
-watch(
-  () => route.name,
-  (currentRoute) => {
-    if (currentRoute !== 'summary' && voteLock) router.replace({ name: 'my-vote' });
-  },
-  {
-    immediate: true,
-  }
-);
+// watch(
+//   () => route.name,
+//   (currentRoute) => {
+//     if (currentRoute !== 'summary' && voteLock) router.replace({ name: 'my-vote' });
+//   },
+//   {
+//     immediate: true,
+//   }
+// );
 </script>
 
 <template>
