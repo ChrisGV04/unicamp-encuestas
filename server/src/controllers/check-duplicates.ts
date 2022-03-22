@@ -29,12 +29,12 @@ export const checkDuplicates = async (req: Request, res: Response) => {
   let totalDeleted = 0;
 
   for (const duplicate of duplicates) {
-    const onesToDelete = await Vote.find({
+    const onesToDelete = await Vote.deleteMany({
       email: duplicate._id,
       _id: { $ne: duplicate.original },
     });
 
-    totalDeleted += onesToDelete.length;
+    totalDeleted += onesToDelete.deletedCount;
   }
 
   res.send({ totalDeleted });
